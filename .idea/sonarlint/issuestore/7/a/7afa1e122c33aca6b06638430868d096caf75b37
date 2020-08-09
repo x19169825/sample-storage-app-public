@@ -1,0 +1,5 @@
+
+g	java:S112""FDefine and throw a dedicated exception instead of using a generic one.(“—“ïúÿÿÿÿ8Þöˆãº.
+µ
+java:S1130"’Remove the declaration of thrown exception 'org.springframework.security.core.userdetails.UsernameNotFoundException' which is a runtime exception.(½ª‰ˆÿÿÿÿÿ8Þöˆãº.
+g	java:S112)"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8Þöˆãº.

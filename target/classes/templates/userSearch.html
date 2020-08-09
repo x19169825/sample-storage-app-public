@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="UTF-8">
+        <title>SSA-User Search</title>
+        <style>
+            header{
+                width: auto;
+                height: 100px;
+                background-color: crimson;
+            }
+            h1{
+                text-align: center;
+                color: antiquewhite;
+                background-color: black;
+            }
+            .main {
+                font-family: sans-serif;
+                position: relative;
+                top:0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: 50px auto;
+
+                width: 200px;
+                height: 250px;
+                background-color: crimson;
+            }
+            .field{
+                padding: 10px;
+            }
+            .field input{
+                alignment: center;
+                padding: 10px;
+                align-content: center;
+                background-color: antiquewhite;
+                color: black;
+                font-size: large;
+                border-width: medium;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>User Page- <span sec:authentication="name">Person</span></h1>
+        </header>
+
+        <div>
+            <table>
+                <caption> Table of available samples</caption>
+                <tr>
+                    <th scope="col">Sample ID</th>
+                    <th scope="col">Batch Num.</th>
+                    <th scope="col">Last Action</th>
+                    <th scope="col">Date Performed</th>
+                    <th scope="col">Storage Location</th>
+                    <th scope="col">Performed By</th>
+                </tr>
+                <tbody>
+                    <tr th:each="sample_info : ${listSamples}">
+                        <td th:text="${sample_info.sampleId}">Sample ID</td>
+                        <td th:text="${sample_info.batch}">Batch Num.</td>
+                        <td th:text="${sample_info.lastAction}">Last Action</td>
+                        <td th:text="${sample_info.lastActionDate}">Date Performed</td>
+                        <td th:text="${sample_info.locationStored}">Storage Location</td>
+                        <td th:text="${sample_info.performedBy}">Performed By</td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+        <div class="main">
+            <form class="field" th:action="@{/logout}" method="post">
+                <label>
+                    <input th:type="submit" th:value="LOGOUT">
+                </label>
+            </form>
+        </div>
+    </body>
+</html>

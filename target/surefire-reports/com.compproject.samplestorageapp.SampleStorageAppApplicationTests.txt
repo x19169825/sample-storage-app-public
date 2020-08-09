@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.compproject.samplestorageapp.SampleStorageAppApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.453 s - in com.compproject.samplestorageapp.SampleStorageAppApplicationTests

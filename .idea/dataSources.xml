@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="MySQL - @localhost" uuid="e9389277-00e5-496a-a5aa-a35a0620d072">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/project_database</jdbc-url>
+      <driver-properties>
+        <property name="serverTimezone" value="Europe/Dublin" />
+      </driver-properties>
+      <time-zone>UTC</time-zone>
+    </data-source>
+    <data-source source="LOCAL" name="Amazon RDS" uuid="f21d27fb-6f19-4bf8-bfe8-3d9d18fc9031">
+      <driver-ref>mysql_aurora</driver-ref>
+      <synchronize>true</synchronize>
+      <remarks>Project DB</remarks>
+      <jdbc-driver>org.mariadb.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql:aurora://sample-storage-app-db.c6uw9drkdici.us-east-1.rds.amazonaws.com:3306/project_database</jdbc-url>
+    </data-source>
+  </component>
+</project>

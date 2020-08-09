@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="UTF-8">
+        <title>SSA-User</title>
+        <style>
+            header{
+                width: auto;
+                height: 100px;
+                background-color: crimson;
+            }
+            h1{
+                text-align: center;
+                color: antiquewhite;
+                background-color: black;
+            }
+            .main {
+                font-family: sans-serif;
+                position: relative;
+                top:0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: 50px auto;
+
+                width: 200px;
+                height: 250px;
+                background-color: crimson;
+            }
+            .field{
+                padding: 10px;
+            }
+            .field input{
+                alignment: center;
+                padding: 10px;
+                align-content: center;
+                background-color: antiquewhite;
+                color: black;
+                font-size: large;
+                border-width: medium;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>User Page- <span sec:authentication="name">Person</span></h1>
+        </header>
+        <div class="main">
+            <form sec:authorize="hasRole('USER')" class="field" th:action="@{/user/search_all}" method="get">
+                    <div class="button"><input type="submit" value="Search All"/></div>
+            </form>
+
+            <form class="field" th:action="@{/logout}" method="post">
+                <label>
+                    <input th:type="submit" th:value="LOGOUT"/>
+                </label>
+            </form>
+        </div>
+    </body>
+</html>
